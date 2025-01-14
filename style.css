@@ -1,0 +1,267 @@
+/* General reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and font styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and navigation styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Home section styles */
+.home-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.home-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.home-section button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 25px;
+  background-color: #f39c12;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.home-section button a:hover {
+  background-color: #e67e22;
+}
+
+/* About section styles */
+.about-section {
+  padding: 60px 20px;
+  background-color: #ecf0f1;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* Profile picture style */
+.profile-picture img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+/* Projects section styles */
+.projects-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact section styles */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-section input, .contact-section textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+  border-color: #f39c12;
+}
+
+.contact-section button {
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #e67e22;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  .home-section h1 {
+      font-size: 32px;
+  }
+
+  .home-section p {
+      font-size: 18px;
+  }
+
+  .about-section p {
+      font-size: 16px;
+  }
+
+  .projects-section h2 {
+      font-size: 30px;
+  }
+
+  .project-gallery {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-section form {
+      width: 90%;
+  }
+
+  .project-card h3 {
+      font-size: 20px;
+  }
+}
